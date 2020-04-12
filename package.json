@@ -2,7 +2,7 @@
   "name": "nodejs-api",
   "version": "0.1.1",
   "engines": {
-    "node": ">=8.0.0"
+    "node": "12.16.2"
   },
   "description": "Node.js server",
   "main": "app.js",
