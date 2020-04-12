@@ -1,0 +1,305 @@
+{
+	"info": {
+		"_postman_id": "19988e59-2a29-4486-b359-771eeffe2434",
+		"name": "Node-User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"fullName\": \"Test\",\n\t\"password\": \"password123\",\n\t\"confirmPassword\": \"password123\",\n\t\"email\": \"test@gmail.com\",\n\t\"phone\": \"0987654324\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3127/api/users/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3127",
+					"path": [
+						"api",
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\": \"test@gmail.com\",\n\t\"password\": \"password123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3127/api/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3127",
+					"path": [
+						"api",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNWZhMmMxOTBhYjRlMTUwYzQ1MmM4ZiIsImlhdCI6MTU2NjU1NTc1OSwiZXhwIjoxNTY2NTU5MzU5fQ.YHMIKf8xLlLbraPYCm3x-lhkKxRHMJ-1FV_NcjUap04",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"id\" :\"5d5fa2c190ab4e150c452c8f\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3127/api/users/logout",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3127",
+					"path": [
+						"api",
+						"users",
+						"logout"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNWZhMmMxOTBhYjRlMTUwYzQ1MmM4ZiIsImlhdCI6MTU2NjU0ODk1NiwiZXhwIjoxNTY2NTUyNTU2fQ.1WRjKg31fpIQRL9bubEfh9rhZQojXliA0kCgijz-2go",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3127/api/users/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3127",
+					"path": [
+						"api",
+						"users",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get by Id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNWZhMmMxOTBhYjRlMTUwYzQ1MmM4ZiIsImlhdCI6MTU2NjU0ODk1NiwiZXhwIjoxNTY2NTUyNTU2fQ.1WRjKg31fpIQRL9bubEfh9rhZQojXliA0kCgijz-2go",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:3127/api/users/5d5f9c70e9c5712540c449c0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3127",
+					"path": [
+						"api",
+						"users",
+						"5d5f9c70e9c5712540c449c0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVkNWZhMmMxOTBhYjRlMTUwYzQ1MmM4ZiIsImlhdCI6MTU2NjU0ODk1NiwiZXhwIjoxNTY2NTUyNTU2fQ.1WRjKg31fpIQRL9bubEfh9rhZQojXliA0kCgijz-2go",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"email\": \"test@test.com\",\n    \"fullName\": \"Test\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3127/api/users/5d5f9c70e9c5712540c449c0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3127",
+					"path": [
+						"api",
+						"users",
+						"5d5f9c70e9c5712540c449c0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\": \"florina.dascal@avangarde-software.com\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3127/api/users/forgot-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3127",
+					"path": [
+						"api",
+						"users",
+						"forgot-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Reset Password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"token\": \"$2a$10$Ic7qdc.lTl8J.lcbJiEmaesRzesrlEEvEFwd7LgIYEtMYFzs5qX96\",\n    \"password\": \"password123\",\n    \"confirmPassword\": \"password123\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3127/api/users/reset-password",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3127",
+					"path": [
+						"api",
+						"users",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check reset password token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"token\":\"$2a$10$Ic7qdc.lTl8J.lcbJiEmaesRzesrlEEvEFwd7LgIYEtMYFzs5qX96\"}"
+				},
+				"url": {
+					"raw": "http://localhost:3127/api/users/check-token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3127",
+					"path": [
+						"api",
+						"users",
+						"check-token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
